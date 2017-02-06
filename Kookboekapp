@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>KokenMetCodes</title>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+	</head>
+	<body> 
+		<form onsubmit="return maakRecept()">
+			<fieldset>
+				<legend>brooddeeg:
+				</legend>
+				<table>
+				<tr>
+					<td>Ingrediënt 1:</td>
+					<td><input type="text" id="i1" value="ei" disabled /></td>
+				</tr>
+				<tr>
+					<td>Ingrediënt 2:</td>
+					<td><input type="text" id="i2" value="meel" disabled /></td>
+				</tr>
+				<tr>
+					<td>Bewerking:</td>
+					<td><input type="text" id="b" value="kneden van ei en meel" disabled /></td>
+				</tr>
+				<tr>
+					<td>Duur:</td>
+					<td><input type="text" id="d" value="5 minuten" disabled /></td>
+				</tr>
+				</table>
+			</fieldset>
+			<br/>
+			<input type="submit" value="Maak recept" />
+		</form>
+		<p id="r"></p>
+
+		<script>
+		function maakRecept() {
+			// waarden ophalen uit HTML-formulier
+			var ingrediënt1 = "ei" ;
+			var ingrediënt2 = "meel" ;
+			var bewerking = "kneden van ei en meel" ;
+			var duur = "5 miniuten" ;
+			// variabelen samenvoegen tot recepttekst
+			var recept = "doe het ei en de meel in een kom en kneed dit 5 minuten" ;
+			// recept in beeld zetten
+      window.alert("doe het ei en de meel in een kom en kneed dit 5 minuten");
+      document.getElementById("r").innerHTML = "doe het ei en de meel in een kom en kneed dit 5 minuten";
+      return false;
+		}
+		</script>
+	</body>
+</html>
